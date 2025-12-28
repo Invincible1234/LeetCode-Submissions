@@ -1,16 +1,15 @@
 class Solution(object):
     def fizzBuzz(self, n):
-        res = []
+        j = []
 
         for i in range(1, n+1):
-           if i % 5 == i % 3 == 0:
-                res.append("FizzBuzz")
-           elif i % 3 == 0:
-                res.append("Fizz")
-           elif i % 5 == 0:
-                res.append("Buzz")
-           else:
-                res.append(str(i))
-        
-        return res
+            if i % 5 == i % 3 == 0:
+                j.append("FizzBuzz")
+            elif i % 3 == 0:
+                j.append("Fizz")
+            elif i % 5 == 0:
+                j.append("Buzz")
+            else:
+                j.append(str(i))
+        return j
         
