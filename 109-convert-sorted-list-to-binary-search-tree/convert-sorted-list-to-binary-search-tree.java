@@ -35,12 +35,12 @@ class Solution {
     }
 
     TreeNode build(List<Integer> l, int left, int right){//args is a list, left and right ints.
-        if(left > right) return null;//if left is greater than 
-        int mid = left + (right - left) / 2;
+        if(left > right) return null;//if left is greater than right then return null.
+        int mid = left + (right - left) / 2;//get the mid point.
 
-        TreeNode root = new TreeNode(l.get(mid));
-        root.left = build(l, left, mid - 1);
-        root.right = build(l, mid + 1, right);
-        return root;
+        TreeNode root = new TreeNode(l.get(mid));//set the treenode root to mid.
+        root.left = build(l, left, mid - 1);//do the same for left recurrsively.
+        root.right = build(l, mid + 1, right);//do the same for right recurrsively.
+        return root;//return the root.
     }
 }
